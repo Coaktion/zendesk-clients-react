@@ -11,6 +11,7 @@ permissions:
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  SSH_AUTH_SOCK: /tmp/ssh_agent.sock
 
 jobs:
   build:
@@ -21,6 +22,13 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+
+      - name: Setup SSH Keys and known_hosts
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+          ssh-agent -a $SSH_AUTH_SOCK > /dev/null
+          ssh-add - <<< "${{ secrets.SSH_PRIVATE_KEY }}"
 
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
