@@ -1,5 +1,5 @@
-import { Methods, ZendeskTicketUrls } from '../../src/zendesk/choices';
-import { ZendeskTicketsClient } from '../../src/zendesk/tickets';
+import { Methods, ZendeskTicketUrls } from '../../src';
+import { ZendeskTicketsClient } from '../../src';
 
 describe('ZendeskTicketsClient', () => {
   let zendeskTicketsClient: ZendeskTicketsClient;

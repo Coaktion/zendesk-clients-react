@@ -142,7 +142,9 @@
     "coveragePathIgnorePatterns": [
       "/node_modules/",
       "/dist/",
-      "/src/index.ts"
+      "/src/index.ts",
+      "/src/locales/",
+      "types.ts"
     ],
     "coverageThreshold": {
       "global": {

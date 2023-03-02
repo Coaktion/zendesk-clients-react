@@ -1,5 +1,5 @@
-import { Methods, ZendeskUserUrls } from '../../src/zendesk/choices';
-import { ZendeskUsersClient } from '../../src/zendesk/users';
+import { Methods, ZendeskUserUrls } from '../../src';
+import { ZendeskUsersClient } from '../../src';
 
 describe('ZendeskUsersClient', () => {
   let zendeskUsersClient: ZendeskUsersClient;
