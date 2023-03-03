@@ -29,15 +29,11 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Setup SSH Keys and known_hosts
-        uses: webfactory/ssh-agent@v0.7.0
-        with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-        
         run: |
           mkdir -p ~/.ssh
           ssh-keyscan github.com >> ~/.ssh/known_hosts
-          echo "chave ${{ secrets.SSH_PRIVATE_KEY }}"
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" | ssh-add -
+          ssh-agent -a $SSH_AUTH_SOCK > /dev/null
+          ssh-add - <<< "${{ secrets.SSH_PRIVATE_KEY }}"
 
       - name: Install Node Modules
         run: npm ci
