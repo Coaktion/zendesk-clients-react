@@ -26,7 +26,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      
+
       - name: Setup SSH Keys and known_hosts
         env:
           SSH_AUTH_SOCK: /tmp/ssh_agent.sock
@@ -35,8 +35,8 @@ jobs:
           ssh-keyscan github.com >> ~/.ssh/known_hosts
           ssh-agent -a $SSH_AUTH_SOCK > /dev/null
           ssh-add - <<< "${{ secrets.SSH_PRIVATE_KEY }}"
-      
-      -   name: Some task that fetches dependencies
+
+      - name: Some task that fetches dependencies
         env:
           SSH_AUTH_SOCK: /tmp/ssh_agent.sock
         run: ./fetch-deps.sh
