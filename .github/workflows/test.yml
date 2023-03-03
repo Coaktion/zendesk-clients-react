@@ -22,15 +22,24 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - name: Reconfigure git to use HTTP authentication
-        run: >
-          git config --global url."https://github.com/".insteadOf
-          ssh://git@github.com/
-
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
+      
+      - name: Setup SSH Keys and known_hosts
+        env:
+          SSH_AUTH_SOCK: /tmp/ssh_agent.sock
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+          ssh-agent -a $SSH_AUTH_SOCK > /dev/null
+          ssh-add - <<< "${{ secrets.SSH_PRIVATE_KEY }}"
+      
+      -   name: Some task that fetches dependencies
+        env:
+          SSH_AUTH_SOCK: /tmp/ssh_agent.sock
+        run: ./fetch-deps.sh
 
       - name: Install Node Modules
         run: npm ci
