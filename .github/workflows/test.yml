@@ -33,6 +33,8 @@ jobs:
         run: |
           mkdir -p ~/.ssh
           ssh-keyscan github.com >> ~/.ssh/known_hosts
+          echo "chave ${{ secrets.SSH_PRIVATE_KEY }}"
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" | ssh-add -
 
       - name: Install Node Modules
         run: npm ci
