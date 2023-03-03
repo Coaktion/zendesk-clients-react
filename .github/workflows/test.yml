@@ -34,11 +34,6 @@ jobs:
           mkdir -p ~/.ssh
           ssh-keyscan github.com >> ~/.ssh/known_hosts
 
-      - name: Some task that fetches dependencies
-        env:
-          SSH_AUTH_SOCK: /tmp/ssh_agent.sock
-        run: ./fetch-deps.sh
-
       - name: Install Node Modules
         run: npm ci
 
