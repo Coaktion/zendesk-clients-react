@@ -1,5 +1,5 @@
 export { ZendeskClientBase } from './zendesk/base';
-export { ZendeskTicketsClient } from './zendesk/tickets'
+export { ZendeskTicketsClient } from './zendesk/tickets';
 export { ZendeskUsersClient } from './zendesk/users';
 export { ZendeskTicketUrls, ZendeskUserUrls, Methods } from './zendesk/choices';
 export { PayloadRequest } from './zendesk/types';

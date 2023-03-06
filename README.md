@@ -21,7 +21,10 @@ npm run generate-docs
 ## Usage
 
 ```typescript
-import { ZendeskTicketsClient, ZendeskUsersClient } from '@coaktion/zendesk-clients-react';
+import {
+  ZendeskTicketsClient,
+  ZendeskUsersClient
+} from '@coaktion/zendesk-clients-react';
 import ZAFClient from 'zendesk_app_framework_sdk';
 
 const zafClient = ZAFClient.init();
