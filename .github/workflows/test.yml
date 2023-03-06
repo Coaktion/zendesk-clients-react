@@ -36,9 +36,7 @@ jobs:
           ssh-add - <<< "${{ secrets.SSH_PRIVATE_KEY }}"
 
       - name: Install Node Modules
-        run: |
-          eval "$(ssh-agent -s)"
-          npm ci
+        run: npm ci
 
       - name: NPM Audit
         run: npx audit-ci
