@@ -16,17 +16,15 @@ env:
 jobs:
   build:
     runs-on: ubuntu-18.04
-    strategy:
-      matrix:
-        node-version: [14.x, 16.x, 18.x]
-
     steps:
       - uses: actions/checkout@v3
 
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Use Node.js 18
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 18
+          cache: 'npm'
+          cache-dependency-path: subdir/package-lock.json
       
       - name: Setup SSH Keys and known_hosts
         run: |
