@@ -23,9 +23,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18.x
-          cache: 'npm'
-          cache-dependency-path: subdir/package-lock.json
-      
+
       - name: Setup SSH Keys and known_hosts
         run: |
           mkdir -p ~/.ssh
