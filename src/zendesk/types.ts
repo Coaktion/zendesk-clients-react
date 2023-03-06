@@ -9,3 +9,12 @@ export class PayloadRequest {
     'Content-Type': 'application/json'
   };
 }
+
+export type ModalProps = {
+  modalName: string;
+  modalUrl: string;
+  size: {
+    width: string;
+    height: string;
+  };
+};

@@ -1,5 +1,5 @@
 import { pathParamsUrl, queryParamsUrl } from '../utils';
-import { PayloadRequest } from './types';
+import { ModalProps, PayloadRequest } from './types';
 
 export class ZendeskClientBase {
   private _client: any;
@@ -105,7 +105,7 @@ export class ZendeskClientBase {
     });
   }
 
-  async invoke(param1, param2, param3) {
+  async invoke(param1, param2?, param3?) {
     return await this.client.invoke(param1, param2, param3);
   }
 
@@ -143,5 +143,29 @@ export class ZendeskClientBase {
    */
   async on(param, data) {
     return await this.client.on(param, data);
+  }
+
+  async setTicketField(ticketFieldId, value) {
+    return await this.set(
+      `ticket.customField:custom_field_${ticketFieldId}`,
+      value
+    );
+  }
+
+  async ticketFieldOption(
+    ticketFieldId,
+    value: 'hide' | 'show' | 'enable' | 'disable'
+  ) {
+    return await this.invoke(
+      `ticket.customField:custom_field_${ticketFieldId}.${value}`
+    );
+  }
+
+  async createModal({ modalName, modalUrl, size }: ModalProps) {
+    return await this.invoke('instances.create', {
+      location: 'modal',
+      url: `${modalUrl}?modal=${modalName}`,
+      size
+    });
   }
 }
