@@ -39,9 +39,8 @@ jobs:
         run: npm ci
 
       - name: NPM Audit
-        with:
-          ssh: default=${{ env.SSH_AUTH_SOCK }}
-          run: npx audit-ci
+        ssh: default=${{ env.SSH_AUTH_SOCK }}
+        run: npx audit-ci
 
       - name: Run Tests and Linting
         run: npm test
