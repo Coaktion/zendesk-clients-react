@@ -7,6 +7,6 @@ export const queryParamsUrl = (url: string, params: any) => {
 
 export const pathParamsUrl = (url: string, params: any) => {
   return url.replace(/{([^}]+)}/g, (_, key) => {
-    return params[key];
+    return params[key].toString();
   });
 };
