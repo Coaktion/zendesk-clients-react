@@ -2,7 +2,7 @@ export class PayloadRequest {
   url: string;
   method: string;
   pathParams?: object;
-  params?: object;
+  queryParams?: object;
   data?: object;
   options?: object = {};
   headers?: object = {

@@ -27,6 +27,12 @@ export class ZendeskClientBase {
     return this._client;
   }
 
+  get isProduction() {
+    let result = false;
+    if (this._appLocation) result = this._appLocation['IS_PRODUCTION'] || false;
+    return result;
+  }
+
   appOnRegister(callback: any) {
     return this.client.on('app.registered', async (data) => {
       this._appLocation = data.context.location;
@@ -95,12 +101,13 @@ export class ZendeskClientBase {
     if (payload.pathParams)
       payload.url = pathParamsUrl(payload.url, payload.pathParams);
 
-    if (payload.params)
-      payload.url = queryParamsUrl(payload.url, payload.params);
+    if (payload.queryParams)
+      payload.url = queryParamsUrl(payload.url, payload.queryParams);
 
     return await this.client.request({
-      payload,
-      secure: this._appLocation['IS_PRODUCTION'],
+      url: payload.url,
+      method: payload.method,
+      secure: this.isProduction,
       contentType: 'application/x-www-form-urlencoded'
     });
   }
@@ -152,10 +159,7 @@ export class ZendeskClientBase {
     );
   }
 
-  async ticketFieldOption(
-    ticketFieldId,
-    value: 'hide' | 'show' | 'enable' | 'disable'
-  ) {
+  async ticketFieldOption(ticketFieldId: string, value: string) {
     return await this.invoke(
       `ticket.customField:custom_field_${ticketFieldId}.${value}`
     );
