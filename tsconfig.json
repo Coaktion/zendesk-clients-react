@@ -3,12 +3,13 @@
     "target": "es2017",
     "module": "commonjs",
     "outDir": "dist",
-    "sourceMap": false,
+    "sourceMap": true,
     "moduleResolution": "node",
     "allowJs": false,
     "noUnusedLocals": true,
     "declaration": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "experimentalDecorators": true
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]
