@@ -8,8 +8,7 @@
     "dist"
   ],
   "publishConfig": {
-    "access": "restricted",
-    "registry": "https://npm.pkg.github.com/"
+    "access": "public"
   },
   "scripts": {
     "clean": "rm -fr dist/*",
@@ -30,9 +29,8 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
-    "@coaktion/aktie-clients": "^0.1.3",
     "class-validator": "^0.14.0",
     "react": "^18.2.0",
     "zendesk_app_framework_sdk": "github:zendesk/zendesk_app_framework_sdk"
