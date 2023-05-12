@@ -45,9 +45,9 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
+      - run: npm ci
       - run: |
           sed -i 's/npm.pkg.github.com/registry.npmjs.org/g' package.json
           sed -i 's/npm.pkg.github.com/registry.npmjs.org/g' .npmrc
           sed -i 's/GITHUB_TOKEN/NPM_TOKEN/g' .npmrc
-      - run: npm ci
       - run: npm publish
