@@ -1,7 +1,8 @@
-import { ZendeskClientBase } from './base';
+import { ZendeskClient } from '@coaktion/client-core';
+
 import { Methods, ZendeskTicketUrls } from './choices';
 
-export class ZendeskTicketsClient extends ZendeskClientBase {
+export class ZendeskTicketsClient extends ZendeskClient {
   constructor(client: any) {
     super(client);
   }

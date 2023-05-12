@@ -1,9 +1,7 @@
-export { ZendeskClientBase } from './zendesk/base';
 export { ZendeskTicketsClient } from './zendesk/tickets';
 export { ZendeskUsersClient } from './zendesk/users';
 export { ZendeskTicketUrls, ZendeskUserUrls, Methods } from './zendesk/choices';
 export { PayloadRequest } from './zendesk/types';
-export { pathParamsUrl, queryParamsUrl } from './utils';
 export { ZendeskProvider, useZendesk } from './hooks/use-zendesk';
 export { MakeBaseComponent } from './factories';
 export { ZendeskClientError, ValidationError } from './errors';
