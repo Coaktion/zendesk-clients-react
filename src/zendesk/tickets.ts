@@ -4,7 +4,7 @@ import { Methods, ZendeskTicketUrls } from './choices';
 
 export class ZendeskTicketsClient extends ZendeskClient {
   constructor(client: any) {
-    super(client);
+    super({ client });
   }
 
   async getTicket(ticketId: string) {

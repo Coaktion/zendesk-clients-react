@@ -4,7 +4,7 @@ import { Methods, ZendeskUserUrls } from './choices';
 
 export class ZendeskUsersClient extends ZendeskClient {
   constructor(client: any) {
-    super(client);
+    super({ client });
   }
 
   async getUser(userId: string) {

@@ -34,7 +34,6 @@ export const MakeBaseComponent: React.FC<Props> = ({
   dependences
 }: Props) => {
   const { zendeskClient } = useZendesk();
-
   return (
     <Component
       settings={settings}
