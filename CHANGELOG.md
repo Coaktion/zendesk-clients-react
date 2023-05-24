@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.2](https://github.com/Coaktion/zendesk-clients-react/compare/v1.1.1...v1.1.2) (2023-05-24)
+
+
+### Bug Fixes
+
+* ajustando instanciacao classe Zendesk ([d8c2abb](https://github.com/Coaktion/zendesk-clients-react/commit/d8c2abb5e49638cc171ecea1c946c4c2a5910919))
+
 ## [1.0.0](https://github.com/Coaktion/zendesk-clients-react/compare/v0.1.1...v1.0.0) (2023-03-15)
 
 ### Features
