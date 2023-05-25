@@ -1,10 +1,11 @@
 import { ZendeskClient } from '@coaktion/client-core';
+import { ClientOptionsZendesk } from '@coaktion/client-core/dist/types';
 
 import { Methods, ZendeskTicketUrls } from './choices';
 
 export class ZendeskTicketsClient extends ZendeskClient {
   constructor(client: any) {
-    super({ client });
+    super({ client } as ClientOptionsZendesk);
   }
 
   async getTicket(ticketId: string) {
