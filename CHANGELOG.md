@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.3](https://github.com/Coaktion/zendesk-clients-react/compare/v1.1.2...v1.1.3) (2023-07-26)
+
+
+### Bug Fixes
+
+* Removing  zaf ([65986b7](https://github.com/Coaktion/zendesk-clients-react/commit/65986b7ccd0c7cc2acb81336085e06950d2a4a68))
+
 ### [1.1.2](https://github.com/Coaktion/zendesk-clients-react/compare/v1.1.1...v1.1.2) (2023-05-24)
 
 
