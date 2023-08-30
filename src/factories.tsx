@@ -1,9 +1,9 @@
+import { ClientOptionsZendesk } from '@coaktion/client-core/dist/types';
 import React from 'react';
 
 import { useZendesk } from './hooks/use-zendesk';
 import { ZendeskTicketsClient } from './zendesk/tickets';
 import { ZendeskUsersClient } from './zendesk/users';
-import { ClientOptionsZendesk } from '@coaktion/client-core/dist/types';
 
 const dependencesMapper: any = {
   tickets: ZendeskTicketsClient,
@@ -15,7 +15,11 @@ type Props = {
   dependences: any[];
 };
 
-const makeDependences = (zendeskClient: any, dependences: any[], options: ClientOptionsZendesk) => {
+const makeDependences = (
+  zendeskClient: any,
+  dependences: any[],
+  options: ClientOptionsZendesk
+) => {
   const dependencesObject = {} as any;
   dependences.forEach((dependence) => {
     if (!dependencesMapper[dependence])

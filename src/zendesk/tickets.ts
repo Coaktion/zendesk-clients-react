@@ -7,7 +7,7 @@ export class ZendeskTicketsClient extends ZendeskClient {
   constructor(client: any, options?: ClientOptionsZendesk) {
     super({ client, ...options } as ClientOptionsZendesk);
     // eslint-disable-next-line no-console
-    console.log('options: ', { client, ...options })
+    console.log('options: ', { client, ...options });
   }
 
   async getTicket(ticketId: string) {

@@ -1,3 +1,4 @@
+import { ClientOptionsZendesk } from '@coaktion/client-core/dist/types';
 import React, {
   type ReactNode,
   createContext,
@@ -5,7 +6,6 @@ import React, {
   useMemo,
   useState
 } from 'react';
-import { ClientOptionsZendesk } from '@coaktion/client-core/dist/types';
 
 type ContextProps = {
   zendeskClient: any;
