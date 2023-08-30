@@ -1,3 +1,4 @@
+import { ClientOptionsZendesk } from '@coaktion/client-core/dist/types';
 import React, {
   type ReactNode,
   createContext,
@@ -9,6 +10,8 @@ import React, {
 type ContextProps = {
   zendeskClient: any;
   setZendesk: React.Dispatch<React.SetStateAction>;
+  options: ClientOptionsZendesk;
+  setOptions: React.Dispatch<React.SetStateAction<ClientOptionsZendesk>>;
 };
 
 type Props = {
@@ -19,10 +22,11 @@ const ZendeskContext = createContext<ContextProps>({} as ContextProps);
 
 const ZendeskProvider: React.FC<Props> = ({ children }: Props) => {
   const [zendeskClient, setZendesk] = useState(null);
+  const [options, setOptions] = useState<ClientOptionsZendesk>({});
 
   const contextValue = useMemo(
-    () => ({ zendeskClient, setZendesk }),
-    [zendeskClient, setZendesk]
+    () => ({ zendeskClient, setZendesk, options, setOptions }),
+    [zendeskClient, setZendesk, options, setOptions]
   );
 
   return (

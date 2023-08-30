@@ -1,3 +1,4 @@
+import { ClientOptionsZendesk } from '@coaktion/client-core/dist/types';
 import React from 'react';
 
 import { useZendesk } from './hooks/use-zendesk';
@@ -14,14 +15,19 @@ type Props = {
   dependences: any[];
 };
 
-const makeDependences = (zendeskClient: any, dependences: any[]) => {
+const makeDependences = (
+  zendeskClient: any,
+  dependences: any[],
+  options: ClientOptionsZendesk
+) => {
   const dependencesObject = {} as any;
   dependences.forEach((dependence) => {
     if (!dependencesMapper[dependence])
       throw new Error(`Dependence ${dependence} not found`);
 
     dependencesObject[dependence] = new dependencesMapper[dependence](
-      zendeskClient
+      zendeskClient,
+      options
     );
   });
 
@@ -33,11 +39,11 @@ export const MakeBaseComponent: React.FC<Props> = ({
   Component,
   dependences
 }: Props) => {
-  const { zendeskClient } = useZendesk();
+  const { zendeskClient, options } = useZendesk();
   return (
     <Component
       settings={settings}
-      {...makeDependences(zendeskClient, dependences)}
+      {...makeDependences(zendeskClient, dependences, options)}
     />
   );
 };
