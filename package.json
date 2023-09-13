@@ -42,6 +42,7 @@
     "@trivago/prettier-plugin-sort-imports": "^4.0.0",
     "@types/jest": "^29.2.5",
     "@types/node": "^18.11.18",
+    "@types/react": "^18.2.21",
     "@typescript-eslint/eslint-plugin": "^5.48.1",
     "axios-mock-adapter": "^1.21.2",
     "eslint": "^8.31.0",
@@ -150,10 +151,10 @@
     ],
     "coverageThreshold": {
       "global": {
-        "branches": 10,
-        "functions": 10,
-        "lines": 10,
-        "statements": 10
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
       }
     }
   },
