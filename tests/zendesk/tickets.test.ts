@@ -7,10 +7,7 @@ describe('ZendeskTicketsClient', () => {
   let zendeskTicketsClient: ZendeskTicketsClient;
   beforeEach(() => {
     jest.resetAllMocks();
-    zendeskTicketsClient = new ZendeskTicketsClient(
-      {},
-      {} as ClientOptionsZendesk
-    );
+    zendeskTicketsClient = new ZendeskTicketsClient({} as ClientOptionsZendesk);
     zendeskTicketsClient.makeRequest = jest.fn();
   });
 

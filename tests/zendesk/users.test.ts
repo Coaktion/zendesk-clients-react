@@ -1,3 +1,5 @@
+import { ClientOptionsZendesk } from '@coaktion/client-core/dist/types';
+
 import { Methods, ZendeskUserUrls } from '../../src';
 import { ZendeskUsersClient } from '../../src';
 
@@ -5,7 +7,7 @@ describe('ZendeskUsersClient', () => {
   let zendeskUsersClient: ZendeskUsersClient;
   beforeEach(() => {
     jest.resetAllMocks();
-    zendeskUsersClient = new ZendeskUsersClient({});
+    zendeskUsersClient = new ZendeskUsersClient({} as ClientOptionsZendesk);
     zendeskUsersClient.makeRequest = jest.fn();
   });
 
