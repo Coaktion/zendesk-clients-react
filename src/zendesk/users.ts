@@ -4,8 +4,8 @@ import { ClientOptionsZendesk } from '@coaktion/client-core/dist/types';
 import { Methods, ZendeskUserUrls } from './choices';
 
 export class ZendeskUsersClient extends ZendeskClient {
-  constructor(client: any) {
-    super({ client } as ClientOptionsZendesk);
+  constructor(client: ClientOptionsZendesk) {
+    super({ ...client });
   }
 
   async getUser(userId: string) {
