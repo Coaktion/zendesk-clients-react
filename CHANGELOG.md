@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.1](https://github.com/Coaktion/zendesk-clients-react/compare/v1.2.0...v1.3.0) (2023-09-18)
+
+
+### Features
+
+* add react types and upgrading test coverages params ([5e093d8](https://github.com/Coaktion/zendesk-clients-react/commit/5e093d802fe8d216c5cc4e23ce3453658a6bff7a))
+* add the option to pass makeRequestParams to client react config ([dcffcda](https://github.com/Coaktion/zendesk-clients-react/commit/dcffcda17055f5a300a6c002ace195138702c2ab))
+
 ## [1.2.0](https://github.com/Coaktion/zendesk-clients-react/compare/v1.1.3...v1.2.0) (2023-08-30)
 
 
