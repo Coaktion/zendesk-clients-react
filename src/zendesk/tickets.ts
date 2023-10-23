@@ -203,4 +203,11 @@ export class ZendeskTicketsClient extends ZendeskClient {
       pathParams: { ticketId }
     });
   }
+
+  async getTicketForms() {
+    return this.makeRequest({
+      url: ZendeskTicketUrls.TicketForms,
+      method: Methods.GET
+    });
+  }
 }

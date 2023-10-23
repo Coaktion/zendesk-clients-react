@@ -12,7 +12,8 @@ export enum ZendeskTicketUrls {
   TicketField = '/api/v2/ticket_fields/{ticketFieldId}.json',
   TicketFieldOptions = '/api/v2/ticket_fields/{ticketFieldId}/options.json',
   Restore = '/api/v2/tickets/{ticketId}/restore.json',
-  MarkAsSpam = '/api/v2/tickets/{ticketId}/mark_as_spam.json'
+  MarkAsSpam = '/api/v2/tickets/{ticketId}/mark_as_spam.json',
+  TicketForms = '/api/v2/ticket_forms.json'
 }
 
 export enum ZendeskUserUrls {
