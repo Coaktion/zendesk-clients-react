@@ -230,4 +230,12 @@ describe('ZendeskTicketsClient', () => {
       pathParams: { ticketId: '1' }
     });
   });
+
+  it('should call makeRequest with the correct params to getTicketForms', () => {
+    zendeskTicketsClient.getTicketForms();
+    expect(zendeskTicketsClient.makeRequest).toHaveBeenCalledWith({
+      url: ZendeskTicketUrls.TicketForms,
+      method: Methods.GET
+    });
+  });
 });
