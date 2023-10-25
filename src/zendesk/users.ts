@@ -70,4 +70,11 @@ export class ZendeskUsersClient extends ZendeskClient {
       pathParams: { userId }
     });
   }
+
+  async getUserGroups() {
+    return this.makeRequest({
+      url: ZendeskUserUrls.UserGroups,
+      method: Methods.GET
+    });
+  }
 }

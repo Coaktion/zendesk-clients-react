@@ -81,4 +81,12 @@ describe('ZendeskUsersClient', () => {
       pathParams: { userId: '1' }
     });
   });
+
+  it('should call makeRequest with the correct params to getUserGroups', () => {
+    zendeskUsersClient.getUserGroups();
+    expect(zendeskUsersClient.makeRequest).toHaveBeenCalledWith({
+      url: ZendeskUserUrls.UserGroups,
+      method: Methods.GET
+    });
+  });
 });

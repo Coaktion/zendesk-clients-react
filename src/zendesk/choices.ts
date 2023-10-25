@@ -25,7 +25,8 @@ export enum ZendeskUserUrls {
   Groups = '/api/v2/users/{userId}/groups.json',
   Tags = '/api/v2/users/{userId}/tags.json',
   Identities = '/api/v2/users/{userId}/identities.json',
-  Identity = '/api/v2/users/{userId}/identities/{identityId}.json'
+  Identity = '/api/v2/users/{userId}/identities/{identityId}.json',
+  UserGroups = '/api/v2/groups.json'
 }
 
 export enum Methods {
