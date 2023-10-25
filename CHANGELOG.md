@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/Coaktion/zendesk-clients-react/compare/v1.3.0...v1.4.0) (2023-10-25)
+
+
+### Features
+
+* add getUserGroups method to list Zendesk groups of the instance ([2e5c41d](https://github.com/Coaktion/zendesk-clients-react/commit/2e5c41d9ef57738e10a5aa7988aa66a3262e5f6f))
+
 ## [1.3.0](https://github.com/Coaktion/zendesk-clients-react/compare/v1.2.1...v1.3.0) (2023-10-23)
 
 
