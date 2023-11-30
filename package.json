@@ -34,7 +34,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@coaktion/client-core": "1.4.0",
+    "@coaktion/client-core": "^1.7.0",
     "class-validator": "^0.14.0",
     "react": "^18.2.0"
   },
