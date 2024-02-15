@@ -1,7 +1,7 @@
 import { ZendeskClient } from '@coaktion/client-core';
 import { ClientOptionsZendesk } from '@coaktion/client-core/dist/types';
 
-import { Methods, ZendeskTicketUrls } from './choices';
+import { ContentType, Methods, ZendeskTicketUrls } from './choices';
 
 export class ZendeskTicketsClient extends ZendeskClient {
   constructor(client: ClientOptionsZendesk) {
@@ -106,7 +106,8 @@ export class ZendeskTicketsClient extends ZendeskClient {
     return this.makeRequest({
       url: ZendeskTicketUrls.Tickets,
       method: Methods.POST,
-      data
+      data: JSON.stringify(data),
+      contentType: ContentType.JSON
     });
   }
 
@@ -115,7 +116,8 @@ export class ZendeskTicketsClient extends ZendeskClient {
       url: ZendeskTicketUrls.Comments,
       method: Methods.POST,
       pathParams: { ticketId },
-      data
+      data: JSON.stringify(data),
+      contentType: ContentType.JSON
     });
   }
 
@@ -124,7 +126,8 @@ export class ZendeskTicketsClient extends ZendeskClient {
       url: ZendeskTicketUrls.Collaborators,
       method: Methods.POST,
       pathParams: { ticketId },
-      data
+      data: JSON.stringify(data),
+      contentType: ContentType.JSON
     });
   }
 
@@ -132,7 +135,8 @@ export class ZendeskTicketsClient extends ZendeskClient {
     return this.makeRequest({
       url: ZendeskTicketUrls.TicketFields,
       method: Methods.POST,
-      data
+      data: JSON.stringify(data),
+      contentType: ContentType.JSON
     });
   }
 
@@ -141,7 +145,8 @@ export class ZendeskTicketsClient extends ZendeskClient {
       url: ZendeskTicketUrls.TicketFieldOptions,
       method: Methods.POST,
       pathParams: { ticketFieldId },
-      data
+      data: JSON.stringify(data),
+      contentType: ContentType.JSON
     });
   }
 
@@ -150,7 +155,8 @@ export class ZendeskTicketsClient extends ZendeskClient {
       url: ZendeskTicketUrls.Ticket,
       method: Methods.PUT,
       pathParams: { ticketId },
-      data
+      data: JSON.stringify(data),
+      contentType: ContentType.JSON
     });
   }
 
@@ -159,7 +165,8 @@ export class ZendeskTicketsClient extends ZendeskClient {
       url: ZendeskTicketUrls.TicketField,
       method: Methods.PUT,
       pathParams: { ticketFieldId },
-      data
+      data: JSON.stringify(data),
+      contentType: ContentType.JSON
     });
   }
 
@@ -168,7 +175,8 @@ export class ZendeskTicketsClient extends ZendeskClient {
       url: ZendeskTicketUrls.TicketFieldOptions,
       method: Methods.PUT,
       pathParams: { ticketFieldId },
-      data
+      data: JSON.stringify(data),
+      contentType: ContentType.JSON
     });
   }
 

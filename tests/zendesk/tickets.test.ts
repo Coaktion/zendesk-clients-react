@@ -2,6 +2,7 @@ import { ClientOptionsZendesk } from '@coaktion/client-core/dist/types';
 
 import { Methods, ZendeskTicketUrls } from '../../src';
 import { ZendeskTicketsClient } from '../../src';
+import { ContentType } from '../../src/zendesk/choices';
 
 describe('ZendeskTicketsClient', () => {
   let zendeskTicketsClient: ZendeskTicketsClient;
@@ -122,7 +123,8 @@ describe('ZendeskTicketsClient', () => {
     expect(zendeskTicketsClient.makeRequest).toHaveBeenCalledWith({
       url: ZendeskTicketUrls.Tickets,
       method: Methods.POST,
-      data: {}
+      data: JSON.stringify({}),
+      contentType: ContentType.JSON
     });
   });
 
@@ -132,7 +134,8 @@ describe('ZendeskTicketsClient', () => {
       url: ZendeskTicketUrls.Comments,
       method: Methods.POST,
       pathParams: { ticketId: '1' },
-      data: {}
+      data: JSON.stringify({}),
+      contentType: ContentType.JSON
     });
   });
 
@@ -142,7 +145,8 @@ describe('ZendeskTicketsClient', () => {
       url: ZendeskTicketUrls.Collaborators,
       method: Methods.POST,
       pathParams: { ticketId: '1' },
-      data: {}
+      data: JSON.stringify({}),
+      contentType: ContentType.JSON
     });
   });
 
@@ -151,7 +155,8 @@ describe('ZendeskTicketsClient', () => {
     expect(zendeskTicketsClient.makeRequest).toHaveBeenCalledWith({
       url: ZendeskTicketUrls.TicketFields,
       method: Methods.POST,
-      data: {}
+      data: JSON.stringify({}),
+      contentType: ContentType.JSON
     });
   });
 
@@ -161,7 +166,8 @@ describe('ZendeskTicketsClient', () => {
       url: ZendeskTicketUrls.TicketFieldOptions,
       method: Methods.POST,
       pathParams: { ticketFieldId: '1' },
-      data: {}
+      data: JSON.stringify({}),
+      contentType: ContentType.JSON
     });
   });
 
@@ -171,7 +177,8 @@ describe('ZendeskTicketsClient', () => {
       url: ZendeskTicketUrls.Ticket,
       method: Methods.PUT,
       pathParams: { ticketId: '1' },
-      data: {}
+      data: JSON.stringify({}),
+      contentType: ContentType.JSON
     });
   });
 
@@ -181,7 +188,8 @@ describe('ZendeskTicketsClient', () => {
       url: ZendeskTicketUrls.TicketField,
       method: Methods.PUT,
       pathParams: { ticketFieldId: '1' },
-      data: {}
+      data: JSON.stringify({}),
+      contentType: ContentType.JSON
     });
   });
 
@@ -191,7 +199,8 @@ describe('ZendeskTicketsClient', () => {
       url: ZendeskTicketUrls.TicketFieldOptions,
       method: Methods.PUT,
       pathParams: { ticketFieldId: '1' },
-      data: {}
+      data: JSON.stringify({}),
+      contentType: ContentType.JSON
     });
   });
 
