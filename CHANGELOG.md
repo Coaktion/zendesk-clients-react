@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.3](https://github.com/Coaktion/zendesk-clients-react/compare/v1.4.2...v1.4.3) (2024-02-16)
+
+
+### Bug Fixes
+
+* default content type and JSON stringify ([f91ac0d](https://github.com/Coaktion/zendesk-clients-react/commit/f91ac0d508b129312c976007f40266c2af9d44a0))
+* test.yml file ([9bb7630](https://github.com/Coaktion/zendesk-clients-react/commit/9bb763093be47440b905ddff9064b8295f7003ef))
+
 ### [1.4.2](https://github.com/Coaktion/zendesk-clients-react/compare/v1.4.1...v1.4.2) (2023-12-27)
 
 ### [1.4.1](https://github.com/Coaktion/zendesk-clients-react/compare/v1.4.0...v1.4.1) (2023-11-30)
