@@ -25,13 +25,6 @@ jobs:
         with:
           node-version: 18.x
 
-      - name: Setup SSH Keys and known_hosts
-        run: |
-          mkdir -p ~/.ssh
-          ssh-keyscan github.com >> ~/.ssh/known_hosts
-          ssh-agent -a $SSH_AUTH_SOCK > /dev/null
-          ssh-add - <<< "${{ secrets.SSH_PRIVATE_KEY }}"
-
       - name: Install Node Modules
         run: npm ci
 

@@ -35,3 +35,7 @@ export enum Methods {
   PUT = 'PUT',
   DELETE = 'DELETE'
 }
+
+export enum ContentType {
+  JSON = 'application/json'
+}
