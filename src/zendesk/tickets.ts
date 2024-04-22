@@ -218,4 +218,11 @@ export class ZendeskTicketsClient extends ZendeskClient {
       method: Methods.GET
     });
   }
+
+  async getTicketBrands() {
+    return this.makeRequest({
+      url: ZendeskTicketUrls.TicketBrands,
+      method: Methods.GET
+    });
+  }
 }

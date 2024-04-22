@@ -247,4 +247,12 @@ describe('ZendeskTicketsClient', () => {
       method: Methods.GET
     });
   });
+
+  it('should call makeRequest with the correct params to getTicketBrands', () => {
+    zendeskTicketsClient.getTicketBrands();
+    expect(zendeskTicketsClient.makeRequest).toHaveBeenCalledWith({
+      url: ZendeskTicketUrls.TicketBrands,
+      method: Methods.GET
+    });
+  });
 });
