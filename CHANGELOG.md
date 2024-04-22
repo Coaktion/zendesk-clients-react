@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/Coaktion/zendesk-clients-react/compare/v1.4.3...v1.5.0) (2024-04-22)
+
+
+### Features
+
+* add getTicketBrands ([07c8059](https://github.com/Coaktion/zendesk-clients-react/commit/07c8059c836d4da50052a54eef0d5b469bd6c007))
+
 ### [1.4.3](https://github.com/Coaktion/zendesk-clients-react/compare/v1.4.2...v1.4.3) (2024-02-16)
 
 
