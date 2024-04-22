@@ -1,6 +1,6 @@
 {
   "name": "@coaktion/zendesk-clients-react",
-  "version": "1.4.3",
+  "version": "1.5.0",
   "description": "API client for ZENDESK applications",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -26,9 +26,9 @@
     "generate-docs": "typedoc",
     "pre-commit": "pretty-quick --staged && npm run test",
     "pre-commit:prepare": "husky install",
-    "release:major": "standard-version -- --release-as major",
-    "release:minor": "standard-version -- --release-as minor",
-    "release:patch": "standard-version -- --release-as patch"
+    "release:major": "standard-version --release-as major",
+    "release:minor": "standard-version --release-as minor",
+    "release:patch": "standard-version --release-as patch"
   },
   "keywords": [],
   "author": "",
