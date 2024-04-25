@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/Coaktion/zendesk-clients-react/compare/v1.5.0...v1.6.0) (2024-04-25)
+
+
+### Features
+
+* adding list macros function to ticket client ([dbbf7b9](https://github.com/Coaktion/zendesk-clients-react/commit/dbbf7b9708c12a4b353c092b0743e4e1ba8f7bd5))
+
 ## [1.5.0](https://github.com/Coaktion/zendesk-clients-react/compare/v1.4.3...v1.5.0) (2024-04-22)
 
 
