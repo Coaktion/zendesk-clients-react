@@ -227,7 +227,7 @@ export class ZendeskTicketsClient extends ZendeskClient {
     });
   }
 
-  async getTicketMacros({ pageSize, cursor }: GetMacrosListParams) {
+  async getInstanceMacros({ pageSize, cursor }: GetMacrosListParams) {
     const params = {
       'page[size]': pageSize,
       ...(cursor && { 'page[after]': cursor })
@@ -236,6 +236,6 @@ export class ZendeskTicketsClient extends ZendeskClient {
       url: ZendeskTicketUrls.TicketMacros,
       method: 'GET',
       params
-    })
+    });
   }
 }

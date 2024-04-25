@@ -20,6 +20,6 @@ export type ModalProps = {
 };
 
 export type GetMacrosListParams = {
-  pageSize: number
-  cursor?: string
-}
+  pageSize: number;
+  cursor?: string;
+};
