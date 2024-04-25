@@ -18,3 +18,8 @@ export type ModalProps = {
     height: string;
   };
 };
+
+export type GetMacrosListParams = {
+  pageSize: number;
+  cursor?: string;
+};

@@ -2,6 +2,7 @@ import { ZendeskClient } from '@coaktion/client-core';
 import { ClientOptionsZendesk } from '@coaktion/client-core/dist/types';
 
 import { ContentType, Methods, ZendeskTicketUrls } from './choices';
+import { GetMacrosListParams } from './types';
 
 export class ZendeskTicketsClient extends ZendeskClient {
   constructor(client: ClientOptionsZendesk) {
@@ -223,6 +224,18 @@ export class ZendeskTicketsClient extends ZendeskClient {
     return this.makeRequest({
       url: ZendeskTicketUrls.TicketBrands,
       method: Methods.GET
+    });
+  }
+
+  async getInstanceMacros({ pageSize, cursor }: GetMacrosListParams) {
+    const params = {
+      'page[size]': pageSize,
+      ...(cursor && { 'page[after]': cursor })
+    };
+    return this.makeRequest({
+      url: ZendeskTicketUrls.TicketMacros,
+      method: 'GET',
+      params
     });
   }
 }

@@ -255,4 +255,28 @@ describe('ZendeskTicketsClient', () => {
       method: Methods.GET
     });
   });
+  it('Should call makeRequest with the correct params to getInstanceMacros', () => {
+    const params = { pageSize: 10 };
+    zendeskTicketsClient.getInstanceMacros(params);
+    expect(zendeskTicketsClient.makeRequest).toHaveBeenCalledWith({
+      url: ZendeskTicketUrls.TicketMacros,
+      method: Methods.GET,
+      params: {
+        'page[size]': 10
+      }
+    });
+  });
+
+  it('Should call makeRequest with the correct params to getInstanceMacros if pagination is required', () => {
+    const params = { pageSize: 10, cursor: 'cursorUrl' };
+    zendeskTicketsClient.getInstanceMacros(params);
+    expect(zendeskTicketsClient.makeRequest).toHaveBeenCalledWith({
+      url: ZendeskTicketUrls.TicketMacros,
+      method: Methods.GET,
+      params: {
+        'page[size]': 10,
+        'page[after]': 'cursorUrl'
+      }
+    });
+  });
 });
