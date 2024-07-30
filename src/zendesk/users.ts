@@ -1,7 +1,7 @@
 import { ZendeskClient } from '@coaktion/client-core';
 import { ClientOptionsZendesk } from '@coaktion/client-core/dist/types';
 
-import { Methods, ZendeskUserUrls } from './choices';
+import { ContentType, Methods, ZendeskUserUrls } from './choices';
 
 export class ZendeskUsersClient extends ZendeskClient {
   constructor(client: ClientOptionsZendesk) {
@@ -75,6 +75,15 @@ export class ZendeskUsersClient extends ZendeskClient {
     return this.makeRequest({
       url: ZendeskUserUrls.UserGroups,
       method: Methods.GET
+    });
+  }
+
+  async createOrUpdate(data: { user: object }) {
+    return this.makeRequest({
+      url: ZendeskUserUrls.CreateOrUpdate,
+      method: Methods.POST,
+      contentType: ContentType.JSON,
+      data: JSON.stringify(data)
     });
   }
 }
