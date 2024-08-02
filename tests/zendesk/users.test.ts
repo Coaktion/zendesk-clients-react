@@ -2,6 +2,7 @@ import { ClientOptionsZendesk } from '@coaktion/client-core/dist/types';
 
 import { Methods, ZendeskUserUrls } from '../../src';
 import { ZendeskUsersClient } from '../../src';
+import { ContentType } from '../../src/zendesk/choices';
 
 describe('ZendeskUsersClient', () => {
   let zendeskUsersClient: ZendeskUsersClient;
@@ -87,6 +88,17 @@ describe('ZendeskUsersClient', () => {
     expect(zendeskUsersClient.makeRequest).toHaveBeenCalledWith({
       url: ZendeskUserUrls.UserGroups,
       method: Methods.GET
+    });
+  });
+
+  it('should call makeRequest with the correct params to createOrUpdate', () => {
+    const data = { user: { name: 'test' } };
+    zendeskUsersClient.createOrUpdate(data);
+    expect(zendeskUsersClient.makeRequest).toHaveBeenCalledWith({
+      url: ZendeskUserUrls.CreateOrUpdate,
+      contentType: ContentType.JSON,
+      method: Methods.POST,
+      data: JSON.stringify(data)
     });
   });
 });
