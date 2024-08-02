@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.6.1](https://github.com/Coaktion/zendesk-clients-react/compare/v1.6.0...v1.6.1) (2024-08-02)
+
+
+### Features
+
+* user create or update ([db9e515](https://github.com/Coaktion/zendesk-clients-react/commit/db9e515fe482e86b5ea60339928a7a08f18031cf))
+
 ## [1.6.0](https://github.com/Coaktion/zendesk-clients-react/compare/v1.5.0...v1.6.0) (2024-04-25)
 
 
