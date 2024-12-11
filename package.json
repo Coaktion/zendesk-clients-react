@@ -1,6 +1,6 @@
 {
   "name": "@coaktion/zendesk-clients-react",
-  "version": "1.6.2",
+  "version": "2.0.0",
   "description": "API client for ZENDESK applications",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
