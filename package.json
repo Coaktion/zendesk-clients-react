@@ -36,7 +36,7 @@
   "dependencies": {
     "@coaktion/client-core": "^1.8.0",
     "class-validator": "^0.14.0",
-    "react": "^18.2.0"
+    "react": "^19.0.0"
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^4.0.0",
